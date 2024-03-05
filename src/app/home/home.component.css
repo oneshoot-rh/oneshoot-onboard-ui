@@ -1,7 +1,8 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 5%;
+    padding: 5%;
   }
   
   .large-section {
@@ -11,7 +12,7 @@
     box-sizing: border-box;
     >*{
         padding: 5px;
-        margin-bottom: 10px;
+        margin-bottom: 5%;
     }
   }
 
@@ -19,8 +20,9 @@
     display: flex;
     flex-direction: row;
     cursor: pointer;
+    background-color: whitesmoke;
   }
-  
+  .mat-card-title{color: #649f9f;  }
   .left-section {
     padding: 10px;
     margin: auto;
@@ -38,6 +40,7 @@
     font-size: larger;
     height: 100%;
     width: 100%;
+    color: #777777;
   }
 
   
