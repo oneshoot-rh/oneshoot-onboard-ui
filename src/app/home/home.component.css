@@ -1,5 +1,3 @@
-/* home.component.scss */
-
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -9,10 +7,10 @@
   .large-section {
     flex: 1;
     max-width: 50%;
-    padding: 10px;
+    padding: 5px;
     box-sizing: border-box;
     >*{
-        padding: 10px;
+        padding: 5px;
         margin-bottom: 10px;
     }
   }
@@ -20,6 +18,7 @@
   .split-card {
     display: flex;
     flex-direction: row;
+    cursor: pointer;
   }
   
   .left-section {

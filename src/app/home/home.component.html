@@ -1,12 +1,7 @@
-<!-- home.component.html -->
-
 <div class="container">
-
-    <!-- Left Section (Large Screens) -->
     <div class="large-section">
-      <mat-card class="split-card">
+      <mat-card class="split-card"  (click)="navigateTo('/employee-management')">
         <div class="left-section">
-          <!-- Add your corresponding icon here -->
           <mat-icon class="mat-icon">supervisor_account</mat-icon>
         </div>
         <div class="right-section">
@@ -14,15 +9,13 @@
             <mat-card-title>Employee Management</mat-card-title>
           </mat-card-header>
           <mat-card-content>
-            <!-- Add content related to Employee Management -->
-            <p>Some description or features here...</p>
+            <p>Manage resources effectively</p>
           </mat-card-content>
         </div>
       </mat-card>
   
-      <mat-card class="split-card">
+      <mat-card class="split-card"  (click)="navigateTo('/employee-onboarding')">
         <div class="left-section">
-          <!-- Add your corresponding icon here -->
           <mat-icon class="mat-icon">supervisor_account</mat-icon>
         </div>
         <div class="right-section">
@@ -30,18 +23,12 @@
             <mat-card-title>Employee Onboarding</mat-card-title>
           </mat-card-header>
           <mat-card-content>
-            <!-- Add content related to Employee Onboarding -->
-            <p>Some description or features here...</p>
+            <p>Process selected candidat</p>
           </mat-card-content>
         </div>
       </mat-card>
-    </div>
-  
-    <!-- Right Section (Large Screens) -->
-    <div class="large-section">
-      <mat-card class="split-card">
+      <mat-card class="split-card"  (click)="navigateTo('/automation')">
         <div class="left-section">
-          <!-- Add your corresponding icon here -->
           <mat-icon class="mat-icon">flash_on</mat-icon>
         </div>
         <div class="right-section">
@@ -49,15 +36,15 @@
             <mat-card-title>Automation Tools</mat-card-title>
           </mat-card-header>
           <mat-card-content>
-            <!-- Add content related to Automation Tools -->
-            <p>Some description or features here...</p>
+            <p>Create a custom automated onboarding workflow</p>
           </mat-card-content>
         </div>
       </mat-card>
+    </div>
   
+    <div class="large-section"  (click)="navigateTo('/gen-ai')">
       <mat-card class="split-card">
         <div class="left-section">
-          <!-- Add your corresponding icon here -->
           <mat-icon class="mat-icon">extension</mat-icon>
         </div>
         <div class="right-section">
@@ -65,15 +52,13 @@
             <mat-card-title>Gen AI Tools</mat-card-title>
           </mat-card-header>
           <mat-card-content>
-            <!-- Add content related to Gen AI Tools -->
-            <p>Some description or features here...</p>
+            <p>Use Generative AI tools</p>
           </mat-card-content>
         </div>
       </mat-card>
   
-      <mat-card class="split-card">
+      <mat-card class="split-card"  (click)="navigateTo('/mailing-automation')">
         <div class="left-section">
-          <!-- Add your corresponding icon here -->
           <mat-icon class="mat-icon">mail</mat-icon>
         </div>
         <div class="right-section">
@@ -81,15 +66,13 @@
             <mat-card-title>Mailing Automation</mat-card-title>
           </mat-card-header>
           <mat-card-content>
-            <!-- Add content related to Mailing Automation -->
-            <p>Some description or features here...</p>
+            <p>Configure automated mails</p>
           </mat-card-content>
         </div>
       </mat-card>
   
-      <mat-card class="split-card">
+      <mat-card class="split-card"  (click)="navigateTo('/e-contracts')">
         <div class="left-section">
-          <!-- Add your corresponding icon here -->
           <mat-icon class="mat-icon">library_books</mat-icon>
         </div>
         <div class="right-section">
@@ -97,8 +80,7 @@
             <mat-card-title>E-contracts</mat-card-title>
           </mat-card-header>
           <mat-card-content>
-            <!-- Add content related to E-contracts -->
-            <p>Some description or features here...</p>
+            <p>Create e-contracts template easly</p>
           </mat-card-content>
         </div>
       </mat-card>
