@@ -1,0 +1,58 @@
+.employee-management-container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #f1f1f1;
+    padding: 20px;
+    min-height: 89vh;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  table {
+    width: 100%;
+  }
+
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    width: fit-content;
+    font-size: small;
+    font-weight: lighter;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .statistics-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    > * {
+      flex: 1;
+      margin-right: 15px;
+    }
+  }
+  
+  .charts {
+    margin-bottom: 20px;
+  }
+  
+  .employee-list {
+    /* Add styling for the employee list if needed */
+  }
+  
