@@ -11,29 +11,33 @@
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     ul{
       li{
-        background-color: antiquewhite;
         width: 100%;
-        text-align: center;
-        padding: 6px;
-        color: var(--brand);
-        border-radius: 5px;
         a{
           font-weight: bold;
           cursor: pointer;
+          text-decoration: none;
+          width: 100% !important;
+          background-color: var(--brand);
+          color: antiquewhite;
+          outline : 1px solid antiquewhite;
+          padding: 6px;
+          display: block;
+          border-radius: 5px;
+        }
+        a:hover,.activebutton {
+          background-color: antiquewhite;
+          box-sizing: border-box;
+          color: var(--brand);
+          /* time to apply hover effect */
+          transition: 0.8s;
         }
       
       }
-      li:hover,li:first-child{
-        background-color: var(--brand);
-        color: antiquewhite;
-        border : 1px solid antiquewhite;
-      }
+      
     }
   }
 
-  table {
-    width: 100%;
-  }
+ 
 
   
   .sidebar ul {
@@ -53,27 +57,4 @@
     flex: 1;
     padding: 20px;
   }
-  
-  .statistics-cards {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    > * {
-      flex: 1;
-      margin-right: 15px;
-      background-color: var(--secondary);
-      color: var(--white);
-      p{
-        color: lightblue;
-      }
-    }
-  }
-  
-  .charts {
-    margin-bottom: 20px;
-  }
-  
-  .employee-list {
-    /* Add styling for the employee list if needed */
-  }
-  
+ 
