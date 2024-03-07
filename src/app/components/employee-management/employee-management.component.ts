@@ -3,6 +3,7 @@ import { MatIconModule } from '@angular/material/icon';
 import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { NgIf } from '@angular/common';
  
 @Component({
   selector: 'app-employee-management',
@@ -11,8 +12,7 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
     MatCardModule,
     MatIconModule,
     MatTableModule,
-    MatPaginatorModule
-    
+    MatPaginatorModule,
   ],
   templateUrl: './employee-management.component.html',
   styleUrl: './employee-management.component.css'

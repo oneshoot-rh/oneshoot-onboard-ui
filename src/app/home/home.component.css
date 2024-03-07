@@ -20,9 +20,9 @@
     display: flex;
     flex-direction: row;
     cursor: pointer;
-    background-color: whitesmoke;
+    background-color: var(--secondary);
   }
-  .mat-card-title{color: #649f9f;  }
+  .mat-card-title{color: var(--white);  }
   .left-section {
     padding: 10px;
     margin: auto;
@@ -37,10 +37,10 @@
 
   .mat-icon {
     margin-right: 10px;
-    font-size: larger;
+    font-size: xx-large;
     height: 100%;
     width: 100%;
-    color: #777777;
+    color: var(--white);
   }
 
   

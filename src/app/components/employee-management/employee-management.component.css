@@ -4,10 +4,31 @@
   
   .sidebar {
     width: 200px;
-    background-color: #f1f1f1;
+    background-color: var(--brand);
     padding: 20px;
+    border-radius: 15px;
     min-height: 89vh;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    ul{
+      li{
+        background-color: antiquewhite;
+        width: 100%;
+        text-align: center;
+        padding: 6px;
+        color: var(--brand);
+        border-radius: 5px;
+        a{
+          font-weight: bold;
+          cursor: pointer;
+        }
+      
+      }
+      li:hover,li:first-child{
+        background-color: var(--brand);
+        color: antiquewhite;
+        border : 1px solid antiquewhite;
+      }
+    }
   }
 
   table {
@@ -27,11 +48,6 @@
     margin-bottom: 10px;
   }
   
-  .sidebar a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-  }
   
   .main-content {
     flex: 1;
@@ -45,6 +61,11 @@
     > * {
       flex: 1;
       margin-right: 15px;
+      background-color: var(--secondary);
+      color: var(--white);
+      p{
+        color: lightblue;
+      }
     }
   }
   

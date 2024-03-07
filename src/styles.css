@@ -1,5 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+
+
+html, body { height: 100%;}
+*{font-size: small!important;
+box-sizing: border-box;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 p{width: fit-content; font-size: small;}
+
+
+:root{
+    --brand: #760CFF;
+    --black: #000000;
+    --white: #FFFFFF;
+    --border: #9747FF;
+    --secondary:#9747FF;
+
+}

@@ -1,1 +1,26 @@
-<p>genai works!</p>
+<!-- gen-ai.component.html -->
+
+<div class="gen-ai-container">
+
+    <mat-card>
+      <mat-card-content>
+  
+        <form (submit)="generateAIResponse()">
+          <mat-form-field class="full-width">
+            <textarea rows="15" matInput placeholder="Ask about OneShoot" [(ngModel)]="userPrompt" required></textarea>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit">Generate AI Response</button>
+        </form>
+  
+        @if(aiResponse){
+          <div class="ai-response">
+            <h3>Response:</h3>
+            <p>{{ aiResponse }}</p>
+          </div>
+        }
+  
+      </mat-card-content>
+    </mat-card>
+  
+  </div>
+  

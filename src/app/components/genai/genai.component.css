@@ -1,0 +1,50 @@
+/* gen-ai.component.scss */
+
+.gen-ai-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+  }
+  
+  mat-card {
+    width: 600px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  button {
+    margin-top: 15px;
+    background-color: var(--brand);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+
+  }
+  .full-width {
+    width: 100%;
+  }
+  
+  .ai-response {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  button {
+    margin-top: 15px;
+  }
+  
