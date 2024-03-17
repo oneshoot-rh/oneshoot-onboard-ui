@@ -1,0 +1,8 @@
+{
+    "/api": {
+      "target": "http://org1710610247121.oneshoot.local:80//one-shoot-main/", 
+      "secure": false,
+    "changeOrigin": true
+    }
+}
+  

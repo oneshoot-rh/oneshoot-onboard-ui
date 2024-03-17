@@ -11,9 +11,10 @@ import { JobsComponent } from './components/employee-management/jobs/jobs.compon
 import { DepartmentsComponent } from './components/employee-management/departments/departments.component';
 import { BenchmarksComponent } from './components/employee-management/benchmarks/benchmarks.component';
 import { InternshipsComponent } from './components/employee-management/internships/internships.component';
+import { AuthGuard } from './guard/auth.guard';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent },
+    { path: '', component: HomeComponent,canActivate: [AuthGuard]},
     { path: 'employee-management', component: EmployeeManagementComponent,
         children:[
             { path: '', redirectTo: 'employees', pathMatch: 'full' },
