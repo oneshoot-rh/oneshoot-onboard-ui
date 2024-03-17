@@ -1,0 +1,29 @@
+table {
+    width: 100%;
+  }
+
+   
+  .statistics-cards {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    > * {
+      flex: 1;
+      margin-right: 15px;
+      background-color: var(--secondary);
+      color: var(--white);
+      p{
+        color: lightblue;
+        font-weight: bold
+      }
+    }
+  }
+  
+  .charts {
+    margin-bottom: 20px;
+  }
+  
+  .employee-list {
+    /* Add styling for the employee list if needed */
+  }
+  
