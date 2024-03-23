@@ -6,7 +6,7 @@ html, body { height: 100%;}
 *{
     box-sizing: border-box;
 }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
 p{width: fit-content; font-size: small;}
 
 
