@@ -1,0 +1,12 @@
+.chart_container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div{
+        flex: 1;
+        canvas{
+            height: 250%;
+        }
+    }
+}
