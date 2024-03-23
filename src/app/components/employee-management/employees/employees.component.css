@@ -18,7 +18,19 @@ table {
       }
     }
   }
-  
+  .action_list{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: end;
+    button{
+      background-color: var(--brand);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      
+    }
+  }
   .charts {
     margin-bottom: 20px;
   }
@@ -26,4 +38,60 @@ table {
   .employee-list {
     /* Add styling for the employee list if needed */
   }
+
+  .main_container{
+    display: flex;
+    justify-content: space-between;
+    .main{
+      flex:1;
+    }
+  }
   
+
+  .right-sidebar {
+    width: 300px;
+    background-color: #f3f3f3;
+    padding: 20px;
+    border-radius: 15px;
+    min-height: 76vh;
+    margin-left: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .notification{
+    .not{
+      cursor: pointer;
+      border-radius: 10px;
+      background-color: #f7f7f7;
+      padding: 10px;
+      display: flex;
+      margin-bottom: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      .icon{
+        margin-right: 10px;
+      }
+  
+    }
+  }
+  .quick_links{
+    margin-top: 20px;
+    ul{
+      list-style: none;
+      padding: 0;
+      li{
+        margin-bottom: 10px;
+  
+        a{
+          text-decoration: underline;
+          color: var(--brand);
+          text-align: left;
+          display: block;
+          padding: 5px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+ 

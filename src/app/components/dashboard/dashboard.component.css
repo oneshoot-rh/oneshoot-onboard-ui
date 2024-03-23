@@ -3,31 +3,34 @@
   }
   
   .sidebar {
-    width: 200px;
+    width: 250px;
     background-color: var(--brand);
     padding: 20px;
     border-radius: 15px;
-    min-height: 89vh;
+    min-height: 95vh;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    .logo{
+      margin-bottom: 30px;
+    }
     ul{
       li{
         width: 100%;
+        margin-bottom: 15px;
         a{
           font-weight: bold;
           cursor: pointer;
           text-decoration: none;
           width: 100% !important;
-          background-color: var(--brand);
+          background-color: var(--secondary);
           color: antiquewhite;
-          outline : 1px solid antiquewhite;
-          padding: 6px;
+          /* outline : 1px solid antiquewhite; */
+          padding: 8px 10px;
           display: block;
           border-radius: 5px;
         }
         a:hover,.activebutton {
-          background-color: antiquewhite;
+          background-color: var(--brand-dark);
           box-sizing: border-box;
-          color: var(--brand);
           /* time to apply hover effect */
           transition: 0.8s;
         }
@@ -36,8 +39,6 @@
       
     }
   }
-
- 
 
   
   .sidebar ul {
@@ -55,6 +56,25 @@
   
   .main-content {
     flex: 1;
-    padding: 20px;
+    width: 100%;
+    padding: 0 20px;
+    .header{
+      margin-bottom: 20px;
+      .login_info {
+        .login_info__user{
+          display: flex;
+          justify-content: end;
+          font-size: medium;
+          }
+      }
+    }
+    .container{
+      display: flex;
+      .main{
+        flex:1;
+        padding: 20px;
+      }
+    }
   }
  
+

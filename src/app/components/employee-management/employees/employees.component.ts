@@ -4,6 +4,7 @@ import { MatIconModule } from '@angular/material/icon';
 import {AfterViewInit, ViewChild} from '@angular/core';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
+import { EmployeeStatsComponent } from '../../charts/employee-stats/employee-stats.component';
 
 @Component({
   selector: 'app-employees',
@@ -13,11 +14,13 @@ import {MatTableDataSource, MatTableModule} from '@angular/material/table';
     MatIconModule,
     MatTableModule,
     MatPaginatorModule,
+    EmployeeStatsComponent
   ],
   templateUrl: './employees.component.html',
   styleUrl: './employees.component.css'
 })
 export class EmployeesComponent implements AfterViewInit {
+  public chart: any;
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
@@ -26,7 +29,7 @@ export class EmployeesComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
-  }
+   }
 }
 
 

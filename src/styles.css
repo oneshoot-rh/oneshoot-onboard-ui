@@ -3,17 +3,20 @@
 
 
 html, body { height: 100%;}
-*{font-size: small!important;
-box-sizing: border-box;}
+*{
+    box-sizing: border-box;
+}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 p{width: fit-content; font-size: small;}
 
 
 :root{
-    --brand: #760CFF;
+    --brand: #994bff;
     --black: #000000;
     --white: #FFFFFF;
     --border: #9747FF;
-    --secondary:#9747FF;
+    --secondary:#ae81e9;
+    --brand-dark: #7a14ff;
+    --krimi: #ff8d70;
 
 }

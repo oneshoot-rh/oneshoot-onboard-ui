@@ -1,0 +1,36 @@
+<div class="employee-management-container">
+    <div class="sidebar">
+      <div class="logo">
+        <img src="https://help.passageways.com/hc/article_attachments/4416232511501/onboard-rect-logo.png" alt="logo" width="100"/>
+      </div>
+      <ul>
+          <li><a routerLink="pre-onboarding"  routerLinkActive="activebutton"   ariaCurrentWhenActive="page">Pre-Onboarding</a></li>
+          <li><a routerLink="orientation"  routerLinkActive="activebutton"   ariaCurrentWhenActive="page">Orientation</a></li>
+          <li><a routerLink="project-assignation"  routerLinkActive="activebutton"   ariaCurrentWhenActive="page">Project Assignation</a></li>
+          <li><a routerLink="employees"  routerLinkActive="activebutton"   ariaCurrentWhenActive="page">Employees</a></li>
+        <li><a routerLink="jobs"  routerLinkActive="activebutton"   ariaCurrentWhenActive="page">Jobs</a></li>
+        <li><a routerLink="internships"  routerLinkActive="activebutton"   ariaCurrentWhenActive="page">Internships</a></li>
+        <li><a routerLink="departments"  routerLinkActive="activebutton"   ariaCurrentWhenActive="page">Departments</a></li>
+        <li><a routerLink="benchmarks"  routerLinkActive="activebutton"   ariaCurrentWhenActive="page">Benchmarks</a></li>
+        <li><a routerLink="surveys"  routerLinkActive="activebutton"   ariaCurrentWhenActive="page">Surveys</a></li>
+      </ul>
+    </div>
+  
+    <div class="main-content">
+      <div class="header">
+        <div class="login_info">
+          <div class="login_info__user">
+            <div class="login_info__user__name">{{username}} &nbsp; &nbsp;</div>
+            <mat-icon> person_pin</mat-icon>
+          </div>
+        </div>   
+      </div>
+       <div class="container">
+          <div class="main">
+            <router-outlet></router-outlet>
+          </div>
+       </div>
+    </div>
+  
+  </div>
+  
