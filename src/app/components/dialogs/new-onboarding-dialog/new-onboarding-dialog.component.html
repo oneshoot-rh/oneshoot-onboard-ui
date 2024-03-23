@@ -1,0 +1,96 @@
+<!-- <h2 mat-dialog-title>New Onboarding</h2>
+<mat-dialog-content>This dialog showcases the title, close, content and actions elements.</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions> -->
+<mat-dialog-content class="custom-dialog-content">
+    <h3>New Onboarding Plan</h3>
+    
+    <div>
+        <mat-form-field style="width: 100%;">
+            <mat-label>Job Offer</mat-label>
+            <mat-select [(ngModel)]="selectedJobOffer">
+              <mat-option *ngFor="let jo of jobOffers" [value]="jo.title">
+                {{ jo.title }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+     </div>
+  
+
+
+    <div>
+        <mat-form-field class="search-field"  style="width: 100%;">
+            <input matInput placeholder="select candidates" [(ngModel)]="searchQuery" (input)="filterData()">
+          </mat-form-field>
+    </div>
+    <mat-selection-list #candidates multiple (selectionChange)="handleSelectionChange(candidates)">
+        @for (item of filteredData; track item) {
+          <mat-list-option color="primary" [value]="item">{{item.name}}</mat-list-option>
+        }
+    </mat-selection-list>
+
+    <p>
+        selected candidates: {{selectedCandidates.length}}
+    </p>
+
+    <mat-list>
+        @for (item of selectedCandidates; track item) {
+          <mat-list-item>{{item.name}}</mat-list-item>
+        }
+    </mat-list>
+
+
+    <!-- <mat-list>
+      <mat-list-item class="filteredItem" *ngFor="let item of filteredData" (click)="selectItem(item)">
+        {{ item.name }}
+      </mat-list-item>
+    </mat-list> -->
+  <div>
+    <mat-form-field style="width: 100%;">
+        <input matInput #input placeholder="Onboarding Subject" [maxLength]="100" [(ngModel)]="onboardingSubject">
+        <mat-hint align="end" >{{input.value.length}}/100</mat-hint>
+    </mat-form-field>  
+  </div>
+   <div>
+    <mat-form-field style="width: 100%;">
+        <input matInput [matDatepicker]="picker" placeholder="Select Date & Time" [(ngModel)]="onboardingDateTime">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker touchUi #picker>
+            <mat-datepicker-actions>
+                <button mat-raised-button color="primary" matDatepickerApply>select</button>
+              </mat-datepicker-actions>
+        </mat-datepicker>
+      </mat-form-field>
+   </div>
+  
+    <mat-checkbox [(ngModel)]="notifyCandidates">Notify Candidates</mat-checkbox>
+  
+    <div *ngIf="notifyCandidates">
+     <div>
+        <mat-form-field style="width: 100%;">
+            <mat-label>Email Template</mat-label>
+            <mat-select [(ngModel)]="selectedTemplate">
+              <mat-option *ngFor="let template of emailTemplates" [value]="template.name">
+                {{ template.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+     </div>
+  
+      <div>
+        <mat-form-field style="width: 100%;">
+            <input matInput #input placeholder="Email Subject" [maxlength]="100" [(ngModel)]="emailSubject">
+            <mat-hint align="end" >{{input.value.length}}/100</mat-hint>
+          </mat-form-field>
+      </div>
+    </div>
+  
+  </mat-dialog-content>
+  
+  <mat-dialog-actions>
+    <button mat-raised-button color="primary" (click)="addOnboarding()">Add</button>
+    <button mat-raised-button (click)="saveAsDraft()">Save as Draft</button>
+    <button mat-raised-button mat-dialog-close>Cancel</button>
+  </mat-dialog-actions>
+  

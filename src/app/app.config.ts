@@ -7,11 +7,13 @@ import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptors, withInterceptor
 import { KeycloakBearerInterceptorProvider, KeycloakInitializerProvider, initializeKeycloak } from './init/keycloak-init.factory';
 import { KeycloakAngularModule, KeycloakBearerInterceptor, KeycloakService } from 'keycloak-angular';
 import { TokenInterceptor } from './guard/TokenInterceptor';
+import { provideNativeDateAdapter } from '@angular/material/core';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideAnimationsAsync(),
+    provideNativeDateAdapter(),
     provideHttpClient(withInterceptorsFromDi()),
     KeycloakInitializerProvider, // Initializes Keycloak
     KeycloakBearerInterceptorProvider, // Provides Keycloak Bearer Interceptor

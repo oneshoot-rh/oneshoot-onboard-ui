@@ -1,0 +1,8 @@
+.mat-mdc-dialog-container{
+    padding: 40px;
+}
+
+.filteredItem{
+    background-color: lightblue;
+    cursor: pointer;
+}
