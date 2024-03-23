@@ -19,6 +19,7 @@ export function initializeKeycloak(
             realm: 'OneShoot',
             clientId: 'frontend_client',
           },
+          loadUserProfileAtStartUp: true,
           initOptions: {
             pkceMethod: 'S256', 
             checkLoginIframe: false,
