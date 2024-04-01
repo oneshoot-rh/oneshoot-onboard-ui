@@ -49,6 +49,7 @@ export class NewOnboardingDialogComponent implements OnInit {
   public jobOffers: any = [];
   public emailTemplates: any = [];
   public data: any = [];
+  public submitted: boolean = false;
   public filteredData: any = [];
   selectedCandidates: any[] = [];
 
@@ -75,6 +76,7 @@ export class NewOnboardingDialogComponent implements OnInit {
     console.log('request',onboardingPlanRequest);
     this._onboardingService.addOnboardingPlan(onboardingPlanRequest).subscribe(
       data => {
+        this.submitted = true;
         console.log(data);
       }
     );
