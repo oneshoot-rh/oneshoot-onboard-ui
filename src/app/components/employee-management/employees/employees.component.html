@@ -6,7 +6,7 @@
           <mat-card-title>Employees</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          <p>23+ increase</p>
+          <p>{{dataSource.data.length}}+ increase</p>
         </mat-card-content>
       </mat-card>
       <mat-card>
@@ -14,7 +14,7 @@
             <mat-card-title>Departments</mat-card-title>
           </mat-card-header>
           <mat-card-content>
-            <p>23+ increase</p>
+            <p>+0 increase</p>
           </mat-card-content>
         </mat-card>
         <mat-card>
@@ -22,7 +22,7 @@
             <mat-card-title>Active Onboarding</mat-card-title>
           </mat-card-header>
           <mat-card-content>
-            <p>23+ increase</p>
+            <p>{{onboardingPlans.data.length}}+ increase</p>
           </mat-card-content>
         </mat-card>
       <mat-card>
@@ -30,21 +30,61 @@
           <mat-card-title>Engagement</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-          <p>23+ increase</p>
+          <p>{{dataSource.data.length}}+ increase</p>
         </mat-card-content>
       </mat-card>
     </div>
   
-    <!-- Charts (Placeholder - Add charts as needed) -->
     <div class="charts">
       <app-employee-stats></app-employee-stats>
     </div>
-  
     <div class="action_list">
+      <button mat-button class="view_calendar">View In Calendar</button>
       <button mat-button (click)="openDialog()">New Onboarding Plan</button>
     </div>
+
+    <div class="OnboardingPlanList">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Planned Onboarding</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="">
+              <table mat-table [dataSource]="onboardingPlans">
+            
+                <ng-container matColumnDef="id">
+                  <th mat-header-cell *matHeaderCellDef> No. </th>
+                  <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+                </ng-container>
+            
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+            
+                <ng-container matColumnDef="date">
+                  <th mat-header-cell *matHeaderCellDef> Date </th>
+                  <td mat-cell *matCellDef="let element"> {{element.plannedAt}} </td>
+                </ng-container>
+            
+                <ng-container matColumnDef="invitees">
+                  <th mat-header-cell *matHeaderCellDef> Invitees </th>
+                  <td mat-cell *matCellDef="let element"> {{element.candidates.length}} </td>
+                </ng-container>
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumnOnboarding"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumnOnboarding;"></tr>
+              </table>
+            
+              <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                             showFirstLastButtons
+                             aria-label="Select page of periodic elements">
+              </mat-paginator>
+            </div>              
+        </mat-card-content>
+      </mat-card>
+    </div>
   
-    <!-- Employee List (Default Content) -->
     <div class="employee-list">
       <mat-card>
         <mat-card-header>
@@ -54,28 +94,24 @@
           <div class="">
               <table mat-table [dataSource]="dataSource">
             
-                <!-- Position Column -->
-                <ng-container matColumnDef="position">
-                  <th mat-header-cell *matHeaderCellDef> No. </th>
-                  <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                <ng-container matColumnDef="ECode">
+                  <th mat-header-cell *matHeaderCellDef> ECode. </th>
+                  <td mat-cell *matCellDef="let element"> {{element.ECode}} </td>
                 </ng-container>
             
-                <!-- Name Column -->
-                <ng-container matColumnDef="name">
+                <ng-container matColumnDef="Name">
                   <th mat-header-cell *matHeaderCellDef> Name </th>
-                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                  <td mat-cell *matCellDef="let element"> {{element.Name}} </td>
                 </ng-container>
             
-                <!-- Weight Column -->
-                <ng-container matColumnDef="weight">
-                  <th mat-header-cell *matHeaderCellDef> Weight </th>
-                  <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                <ng-container matColumnDef="Email">
+                  <th mat-header-cell *matHeaderCellDef> Email </th>
+                  <td mat-cell *matCellDef="let element"> {{element.Email}} </td>
                 </ng-container>
             
-                <!-- Symbol Column -->
-                <ng-container matColumnDef="symbol">
-                  <th mat-header-cell *matHeaderCellDef> Symbol </th>
-                  <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                <ng-container matColumnDef="Role">
+                  <th mat-header-cell *matHeaderCellDef> Role </th>
+                  <td mat-cell *matCellDef="let element"> {{element.Role}} </td>
                 </ng-container>
             
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

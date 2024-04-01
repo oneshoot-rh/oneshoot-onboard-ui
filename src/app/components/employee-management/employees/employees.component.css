@@ -13,7 +13,7 @@ table {
       background-color: var(--secondary);
       color: var(--white);
       p{
-        color: lightblue;
+        color: rgb(255, 255, 255);
         font-weight: bold
       }
     }
@@ -28,7 +28,13 @@ table {
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
-      
+    }
+    
+    button.view_calendar{
+      background-color: transparent;
+      color: var(--brand);
+      border: 1px solid var(--brand);
+      margin-right: 10px;
     }
   }
   .charts {
@@ -94,4 +100,7 @@ table {
     }
   }
 
- 
+
+  .OnboardingPlanList{
+    margin-bottom: 20px;
+  }
