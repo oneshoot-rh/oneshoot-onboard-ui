@@ -11,6 +11,6 @@ export class UploadService {
 
   public getUploads() {
     //const headers = new HttpHeaders().set('Host','org1710610247121.oneshoot.local')
-    return this.http.get('/api/cl/uploads');
+    return this.http.get('/onboarding/api/cl/uploads');
   }
 }
