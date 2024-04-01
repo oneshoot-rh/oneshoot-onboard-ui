@@ -15,7 +15,7 @@ export function initializeKeycloak(
       return () =>
         keycloak.init({
           config: {
-            url: 'http://localhost:9999',
+            url: 'http://oneshoot.local:9999',
             realm: 'OneShoot',
             clientId: 'frontend_client',
           },
