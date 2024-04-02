@@ -1,0 +1,23 @@
+.action_list{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: end;
+    button{
+      background-color: var(--brand);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+    }
+    
+    button.newProject{
+      background-color: transparent;
+      color: var(--brand);
+      border: 1px solid var(--brand);
+      margin-right: 10px;
+    }
+  }
+
+.pa_container{
+margin-top: 20px;
+}

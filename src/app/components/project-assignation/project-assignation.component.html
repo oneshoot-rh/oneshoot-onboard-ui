@@ -1,1 +1,53 @@
-<p>project-assignation works!</p>
+<div class="pa_container">
+    <div class="action_list">
+        <button mat-button class="newProject">New Project</button>
+        <button mat-button (click)="openDialog()">New Assignation</button>
+    </div>
+    
+    <div class="OnboardingPlanList">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Project Assignation</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="">
+                <table mat-table [dataSource]="projectAssignations">
+              
+                  <ng-container matColumnDef="Project">
+                    <th mat-header-cell *matHeaderCellDef> Project  </th>
+                    <td mat-cell *matCellDef="let element"> {{element.project}} </td>
+                  </ng-container>
+              
+                  <ng-container matColumnDef="Deployed Employees">
+                    <th mat-header-cell *matHeaderCellDef> Deployed Employees </th>
+                    <td mat-cell *matCellDef="let element"> {{element.deployedEmployees.length}} </td>
+                  </ng-container>
+              
+                  <ng-container matColumnDef="Status">
+                    <th mat-header-cell *matHeaderCellDef> Status </th>
+                    <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+                  </ng-container>
+              
+                  <ng-container matColumnDef="Project Family">
+                    <th mat-header-cell *matHeaderCellDef> Project Family </th>
+                    <td mat-cell *matCellDef="let element"> {{element.projectFamily}} </td>
+                  </ng-container>
+              
+                  <ng-container matColumnDef="Project Manager">
+                    <th mat-header-cell *matHeaderCellDef> Project Manager </th>
+                    <td mat-cell *matCellDef="let element"> {{element.projectManager}} </td>
+                  </ng-container>
+              
+                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+              
+                <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                               showFirstLastButtons
+                               aria-label="Select page of periodic elements">
+                </mat-paginator>
+              </div>              
+          </mat-card-content>
+        </mat-card>
+    </div>
+</div>
