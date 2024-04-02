@@ -17,6 +17,7 @@ import { MailServiceService } from '../../../services/mail/mail-service.service'
 import { CandidateService } from '../../../services/candidates/candidate.service';
 import { OnboardingService } from '../../../services/candidates/onboarding.service';
 import { onboardingPlanRequest } from '../../../types/types';
+import { NotifierModule, NotifierService } from 'angular-notifier';
 
 
 @Component({
@@ -32,6 +33,7 @@ import { onboardingPlanRequest } from '../../../types/types';
     FormsModule,
     MatInputModule,
     MatButtonModule,
+    NotifierModule,
     CommonModule
     
   ],
@@ -58,10 +60,12 @@ export class NewOnboardingDialogComponent implements OnInit {
     private _jobOfferService : JobOfferService,
     private _mailService: MailServiceService,
     private candidateService: CandidateService,
-    private _onboardingService: OnboardingService
+    private _onboardingService: OnboardingService,
+    private _notifierService: NotifierService
   ) { }
 
   public addOnboarding() {
+    if (this.submitted) return;
     // date should be in this format yyyy-MM-dd-HH-mm-ss
     const onDate = this.onboardingDate.toISOString().split('.')[0];
     const onboardingPlanRequest : onboardingPlanRequest= {
@@ -77,6 +81,8 @@ export class NewOnboardingDialogComponent implements OnInit {
     this._onboardingService.addOnboardingPlan(onboardingPlanRequest).subscribe(
       data => {
         this.submitted = true;
+        this._notifierService.notify('success', 'Onboarding Plan added successfully!');
+        // fetch onboardingPlans again
         console.log(data);
       }
     );

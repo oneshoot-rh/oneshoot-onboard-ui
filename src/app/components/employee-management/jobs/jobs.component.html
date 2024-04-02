@@ -1,1 +1,13 @@
 <p>jobs works!</p>
+
+
+
+<h3>Upload History</h3>
+
+@for (item of uploadHistory; track $index) {
+    <div class="upload-history-item">
+        <div class="upload-history-item__title">{{item.uploadDirectory}}</div>
+        <div class="upload-history-item__date">{{item.uploadDateTime}}</div>
+        <div class="upload-history-item__date">{{item.uploadFiles}}</div>
+    </div>
+}

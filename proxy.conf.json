@@ -1,8 +1,13 @@
 {
-    "/api": {
-      "target": "http://org1710610247121.oneshoot.local:80//one-shoot-main/", 
+    "/tenantService": {
+      "target": "http://tenantService.oneshoot.local:80//", 
       "secure": false,
-    "changeOrigin": true
+      "changeOrigin": true
+    },
+    "/onboarding":{
+      "target": "http://myorg.oneshoot.local:80//", 
+      "secure": false,
+      "changeOrigin": true
     }
 }
   
