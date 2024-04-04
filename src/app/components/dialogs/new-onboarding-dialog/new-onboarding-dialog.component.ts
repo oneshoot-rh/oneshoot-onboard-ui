@@ -54,6 +54,7 @@ export class NewOnboardingDialogComponent implements OnInit {
   public submitted: boolean = false;
   public filteredData: any = [];
   selectedCandidates: any[] = [];
+  candidatesAv: any[] = [];
 
 
   constructor(
@@ -123,6 +124,7 @@ export class NewOnboardingDialogComponent implements OnInit {
       data => {
         console.log(data.content);
         this.data = data.content;
+        this.candidatesAv = data.content;
       }
     );
   }
